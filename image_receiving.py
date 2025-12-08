@@ -1,3 +1,6 @@
+# IMAGE PRODUCER: "receives" the image from outside Apache Kafka, "stores" it,
+# (client)        and sends a Kafka message about it to the image analyzer client
+
 from kafka import KafkaProducer
 import json
 
@@ -7,8 +10,10 @@ producer = KafkaProducer(
     value_serializer=lambda v: json.dumps(v).encode('utf-8') # Serialize messages to JSON bytes
 )
 
+print("Starting image receiving client ...")
+
 # Send a message to a topic
-topic_name = 'my_python_topic'
+topic_name = 'image_analysis'
 message_data = {'id': 1, 'name': 'example_message'}
 producer.send(topic_name, message_data)
 

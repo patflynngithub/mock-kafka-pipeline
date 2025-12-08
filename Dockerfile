@@ -1,3 +1,5 @@
+# For development phase of project (source code outside of container)
+
 FROM apache/kafka:4.1.1
 WORKDIR /pipeline
 
@@ -7,8 +9,7 @@ RUN apk add python3 && \
     apk add py3-pip && \
     pip install kafka-python --break-system-packages
 
-# Copy in the source code
-COPY producer.py consumer.py ./
+# Copy the source code into the container
+COPY *.py ./
 EXPOSE 9092
-
 
