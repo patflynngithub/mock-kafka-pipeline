@@ -5,4 +5,4 @@
 - investigate ramifications of using -u="root" in docker run command
 - add "image analysis alert" event Kafka producer messaging to the image_analysis client code
 - create the "image analysis alert" event consumer Kafka messaging and processing client code
-
+- create application to allow image event subscribers to view the event
