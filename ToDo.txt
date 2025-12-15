@@ -3,6 +3,6 @@
 
 - clean up CONSTANTS package/module setup
 - investigate ramifications of using -u="root" in docker run command
-- add "phenomenon of interest" alert Kafka producer messaging to the image_analysis client code
-- create the "phenomenon of interest" alert consumer messaging Kafka client code
+- add "image analysis alert" event Kafka producer messaging to the image_analysis client code
+- create the "image analysis alert" event consumer Kafka messaging and processing client code
 

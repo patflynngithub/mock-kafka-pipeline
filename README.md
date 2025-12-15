@@ -6,7 +6,7 @@ This is a mock image processing pipeline using Apache Kafka.
 
 It uses python Kafka clients to do the image processing work.  
 
-It receives images, stores them in a database, analyzes them to detect a phenomenon of interest, and notifies interested parties when the phenomenon of interest occurs.  
+It receives images, stores them in a database, analyzes them to detect an "image event" of interest, and notifies interested parties when the "image" event of interest occurs.  
 
 The mock aspects are:  
 
@@ -18,7 +18,7 @@ The mock aspects are:
 ### Build Apache Kafka image and create a container that automatically runs Apache Kafka
 If you've already issued the below docker (pipeline) image/container creation commands on your system, then you may first need to clean up your Docker environment:  
 
-$ docker stop pipeline_container  
+$ docker stop pipeline_container
 $ docker rm pipeline_container  
 $ docker rmi pipeline_image
 
