@@ -17,7 +17,7 @@ The mock aspects are:
 ## <u>Commands</u>
 
 ### Build Apache Kafka image and create a container that automatically runs Apache Kafka
-If you've already issued the below docker (pipeline) image/container build/run commands on your system, then you may first need to clean up your Docker environment:  
+If you've already issued the below docker (pipeline) build/run commands for this project on your system, then you may first need to clean up your Docker environment:  
 
 $ docker stop pipeline_container
 $ docker rm pipeline_container  
@@ -27,6 +27,14 @@ Then build/run the image/container. Running the container automatically runs Apa
 
 $ docker build -t pipeline_image .  
 $ docker run -v \<path where this application's code files are stored>:/pipeline --name pipeline_container -u="root" -p 9092:9092 pipeline_image
+
+### <u>Open a command-line window, enter the container and run the image event alerting Kafka client</u>
+
+Open a command-line window and enter the following commands:  
+
+$ docker exec -it pipeline_container /bin/bash  
+     (you will automatically be put in the  /pipeline directory of the container)  
+$ python image_event_alert.py
 
 ### <u>Open a command-line window, enter the container and run the image analysis Kafka client</u>
 Open a command-line window and enter the following commands:  
@@ -44,7 +52,9 @@ $ python image_receiving.py
 
 
 
-### If everything runs successfully (according to the text output), you can look in the image_database/ directory for the "stored" images and in the image_events/ directory for the image event description text files.
+### If everything runs successfully (according to the text output), you can look in the image_database/ directory for the "stored" images, in the image_event_database/ directory for the image event description text files, and in the image_event_alerts/ directory.
+
+
 
 You can empty the *image_\** directories (except for image_original/) using the following command:  
 

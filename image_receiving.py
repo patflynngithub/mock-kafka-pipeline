@@ -98,7 +98,7 @@ if __name__ == "__main__":
         receive_image(image_num, image_recv_path, prev_image_recv_path)
 
         # send a Kafka message to the image analysis client
-        message_data = {'image_num': image_num }
+        message_data = {'image_num': image_num}
         producer.send(topic_name, message_data)
         # Flush message to ensure delivery
         producer.flush()
