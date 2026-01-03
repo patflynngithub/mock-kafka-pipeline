@@ -18,7 +18,9 @@ The mock aspects are:
 
 
 
-<span style="color:blue;">Many of the following commands require to be executed in the application's main directory where its Python (*.py) files are.</span>
+#### Many of the following commands require to be executed in the application's main directory where its Python (*.py) files are.
+
+
 
 ### Build Apache Kafka image and create a container that automatically runs Apache Kafka
 
