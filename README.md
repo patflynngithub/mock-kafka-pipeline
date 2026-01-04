@@ -26,7 +26,7 @@ The mock aspects are:
 
 If you've already issued the below docker (pipeline) build/run commands for this project on your system, then you may first need to clean up your Docker environment:  
 
-$ docker stop pipeline_container
+$ docker stop pipeline_container  
 $ docker rm pipeline_container  
 $ docker rmi pipeline_image
 
