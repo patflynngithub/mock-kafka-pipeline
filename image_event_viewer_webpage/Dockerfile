@@ -1,5 +1,9 @@
+# Dockerfile for Python Flask development webserver (server-side python scripting)
+
 # Use an official Python runtime as a parent image
 FROM python:3
+
+# Allows python print() statements while using Flask to be displayed on the console
 ENV PYTHONUNBUFFERED="True"
 
 # Set the working directory in the container

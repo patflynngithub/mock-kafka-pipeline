@@ -1,9 +1,15 @@
+#!/usr/bin/env bash
 
-# Clean up docker environment of containers and images
+# Clean up any previous image event viewer webpage docker images and containers
 docker rm python-flask-server_container
 docker rmi python-flask-server_image:latest
 
-# Set up image viewer webpage docker image/container
+# Set up image event viewer Flask webpage docker image/container
+
 docker build --progress=plain -t python-flask-server_image .
+
+# the .. in the -v argument below references the image pipeline's main application directory;
+# allows the Flask application in the container to access the data file results of the most 
+# recent image pipeline run
 docker run -v ..:/pipeline -p 8000:8000 --name python-flask-server_container python-flask-server_image
 
