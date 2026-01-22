@@ -1,5 +1,7 @@
 # Mock Image Pipeline Using Apache Kafka
 
+## *Note: After this application was finished, it was also successfully run unaltered on the Amazon Cloud. Now there is a separate Cloud version in a repository on the same GitHub account. This new version is developed starting from the original version base. The new version utilizes the Amazon Cloud's relational database (RDS) and object storage (S3) services.*
+
 ## <u>Description</u>
 
 This is a mock image processing pipeline using Apache Kafka. It was developed and run on a Linux Mint PC.
